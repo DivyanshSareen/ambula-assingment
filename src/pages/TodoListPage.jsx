@@ -4,26 +4,13 @@ import {
   Box,
   TextField,
   Button,
+  Typography,
 } from '@mui/material';
+import { useTodo } from '../context/todo-context';
 
 export default function TodoListPage() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: 'Complete Assignment',
-      isComplete: false,
-    },
-    {
-      id: 2,
-      title: 'Water Plants',
-      isComplete: false,
-    },
-    {
-      id: 3,
-      title: 'Touch Grass',
-      isComplete: false,
-    },
-  ]);
+  const { tasks, setTasks } = useTodo();
+
   const [input, setInput] = useState('');
 
   const createTask = () => {
@@ -58,6 +45,7 @@ export default function TodoListPage() {
           onChange={(e) =>
             setInput(e.target.value)
           }
+          autoComplete='off'
         />
         <Button
           variant='contained'
@@ -65,6 +53,23 @@ export default function TodoListPage() {
           onClick={createTask}>
           Add
         </Button>
+      </Box>
+      <Box
+        sx={{
+          margin: '1em 2em 1em 1em',
+          textAlign: 'end',
+        }}>
+        <Typography variant='h6'>
+          Total Tasks: {tasks.length}
+        </Typography>
+        <Typography variant='h6'>
+          Tasks Completed:{' '}
+          {
+            tasks.filter(
+              (task) => task.isComplete
+            ).length
+          }
+        </Typography>
       </Box>
       <Box
         sx={{
