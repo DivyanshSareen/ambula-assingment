@@ -7,7 +7,7 @@ export default function ShoppingCartPage() {
   return (
     <>
       <ProductList />
-      <CartList id='cart' />
+      <CartList />
     </>
   );
 }

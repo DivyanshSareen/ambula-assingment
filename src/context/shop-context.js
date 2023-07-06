@@ -38,22 +38,7 @@ const ShopProvider = ({ children }) => {
     },
   ]);
 
-  const [cart, setCart] = useState([
-    {
-      id: 1,
-      name: 'Mechanical Keyboard',
-      image:
-        'https://www.meckeys.com/wp-content/uploads/2022/02/Ducky-One-3-Yellow-SF-5-min-scaled.jpg',
-      price: 5000,
-    },
-    {
-      id: 4,
-      name: 'Coiled Cable',
-      image:
-        'https://www.meckeys.com/wp-content/uploads/2022/09/Rainbow-Meckeys-Coiled-Cable-min-scaled.jpg',
-      price: 700,
-    },
-  ]);
+  const [cart, setCart] = useState([]);
 
   const getCartTotal = (cart) => {
     return cart?.reduce(
