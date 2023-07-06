@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import { TodoProvider } from './context/todo-context';
 import { ShopProvider } from './context/shop-context';
+import { PokemonProvider } from './context/pokemon-context';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -14,7 +15,9 @@ root.render(
     <BrowserRouter>
       <TodoProvider>
         <ShopProvider>
-          <App />
+          <PokemonProvider>
+            <App />
+          </PokemonProvider>
         </ShopProvider>
       </TodoProvider>
     </BrowserRouter>

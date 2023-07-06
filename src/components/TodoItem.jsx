@@ -21,10 +21,11 @@ export default function TodoItem({ task }) {
     <Box
       sx={{
         padding: '1em',
-        border: '5px solid #288bed',
-        borderRadius: '6px',
         display: 'flex',
         alignItems: 'center',
+        boxShadow: 2,
+        borderRadius: 2,
+        background: '#efefef',
       }}>
       <Checkbox
         checked={!!task.isComplete}

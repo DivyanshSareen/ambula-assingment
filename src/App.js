@@ -3,6 +3,7 @@ import {
   TodoListPage,
   ListingPage,
   CartPage,
+  PokemonPage,
 } from './pages';
 import DenseAppBar from './components/DenseAppBar';
 
@@ -15,7 +16,6 @@ function App() {
           path='todo-list'
           element={<TodoListPage />}
         />
-
         <Route
           path='listing'
           element={<ListingPage />}
@@ -23,6 +23,10 @@ function App() {
         <Route
           path='cart'
           element={<CartPage />}
+        />
+        <Route
+          path='pokemon'
+          element={<PokemonPage />}
         />
       </Routes>
     </div>
