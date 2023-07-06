@@ -4,12 +4,17 @@ import {
   ListingPage,
   CartPage,
   PokemonPage,
+  AboutPage,
+  HomePage,
+  ContactPage,
 } from './pages';
 import DenseAppBar from './components/DenseAppBar';
 
 function App() {
   return (
-    <div className='App'>
+    <div
+      className='App'
+      style={{ maxWidth: '400px' }}>
       <DenseAppBar />
       <Routes>
         <Route
@@ -27,6 +32,15 @@ function App() {
         <Route
           path='pokemon'
           element={<PokemonPage />}
+        />
+        <Route path='/' element={<HomePage />} />
+        <Route
+          path='/about'
+          element={<AboutPage />}
+        />
+        <Route
+          path='/contact'
+          element={<ContactPage />}
         />
       </Routes>
     </div>

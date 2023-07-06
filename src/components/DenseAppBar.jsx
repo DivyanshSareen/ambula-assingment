@@ -17,8 +17,13 @@ import { Link } from 'react-router-dom';
 
 function getAppBarTitle(path) {
   let titleMap = {
-    '/todo-list': 'Todo List',
-    '/shop': 'Shopping',
+    '/todo-list': 'Task 1',
+    '/cart': 'Task 2',
+    '/listing': 'Task 2',
+    '/pokemon': 'Task 3',
+    '/': 'Task 4',
+    '/about': 'Task 4',
+    '/contact': 'Task 4',
   };
 
   return titleMap[path];
@@ -68,7 +73,7 @@ export default function DenseAppBar() {
           <Divider />
           <ListItem sx={{ fontWeight: 'bold' }}>
             Task 4
-          </ListItem>{' '}
+          </ListItem>
           <Link to='/'>
             <ListItem>Home</ListItem>
           </Link>
