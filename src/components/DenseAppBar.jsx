@@ -10,6 +10,7 @@ import { useLocation } from 'react-router';
 function getAppBarTitle(path) {
   let titleMap = {
     '/todo-list': 'Todo List',
+    '/shop': 'Shopping',
   };
 
   return titleMap[path];
@@ -17,7 +18,6 @@ function getAppBarTitle(path) {
 
 export default function DenseAppBar() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
