@@ -1,3 +1,13 @@
+import {
+  ProductList,
+  CartList,
+} from '../components';
+
 export default function ShoppingCartPage() {
-  return <>Shopping Cart Here</>;
+  return (
+    <>
+      <ProductList />
+      <CartList id='cart' />
+    </>
+  );
 }

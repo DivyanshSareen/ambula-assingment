@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router';
 import {
-  ShoppingCartPage,
   TodoListPage,
+  ListingPage,
+  CartPage,
 } from './pages';
 import DenseAppBar from './components/DenseAppBar';
 
@@ -14,9 +15,14 @@ function App() {
           path='todo-list'
           element={<TodoListPage />}
         />
+
         <Route
-          path='shop'
-          element={<ShoppingCartPage />}
+          path='listing'
+          element={<ListingPage />}
+        />
+        <Route
+          path='cart'
+          element={<CartPage />}
         />
       </Routes>
     </div>
